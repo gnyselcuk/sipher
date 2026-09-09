@@ -1,0 +1,64 @@
+{
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "vram_gb": 8.312848384,
+  "date": "2026-07-28T00:58:24.881363",
+  "ops_65536": {
+    "ntt_fwd_ms": 0.008490701999107841,
+    "ntt_inv_ms": 0.01356167599442415,
+    "pw_mult_ms": 0.004400639998493716,
+    "ct_pt_full_ms": 0.029378445993643254,
+    "ct_ct_ms": 0.036939492005330976,
+    "rotation_ms": 0.03148111400514608,
+    "batch_pw_total_ms": 0.3149957460045698,
+    "batch_pw_per_op_ms": 0.009843617062642807
+  },
+  "pythia_70m": {
+    "d_model": 896,
+    "seq_len": 1024,
+    "n_layers": 24,
+    "N": 65536,
+    "n_groups": 28,
+    "ch_per_ct": 32,
+    "bsgs": true,
+    "hoisted": true,
+    "total_rot": 86016,
+    "total_ct_pt": 1376256,
+    "total_ct_ct": 1344,
+    "total_intt": 1344,
+    "t_rot_s": 2.7078795022666453,
+    "t_ct_pt_s": 6.056407201766968,
+    "t_ct_ct_s": 0.049646677255164834,
+    "t_intt_s": 0.018226892536506056,
+    "t_total_s": 8.832160273825284
+  },
+  "qwen_08b": {
+    "d_model": 1024,
+    "seq_len": 1024,
+    "n_layers": 28,
+    "N": 65536,
+    "n_groups": 32,
+    "ch_per_ct": 32,
+    "bsgs": true,
+    "hoisted": true,
+    "total_rot": 114688,
+    "total_ct_pt": 1835008,
+    "total_ct_ct": 1792,
+    "total_intt": 1792,
+    "t_rot_s": 3.610506003022194,
+    "t_ct_pt_s": 8.075209602355956,
+    "t_ct_ct_s": 0.06619556967355311,
+    "t_intt_s": 0.024302523382008077,
+    "t_total_s": 11.776213698433713
+  },
+  "power_softmax_ref": {
+    "time_s": 8.6,
+    "hardware": "A100",
+    "accuracy": "~99%"
+  },
+  "cpu_openfhe_refs": {
+    "(16, 16, 2)": 55.0,
+    "(32, 32, 2)": 220.0,
+    "(64, 64, 2)": 292.0,
+    "(128, 128, 2)": 1163.0
+  }
+}

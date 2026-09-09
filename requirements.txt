@@ -1,0 +1,11 @@
+# Sipher v1 — core Python deps (plaintext train + TenSEAL demos)
+torch>=2.2.0
+numpy>=1.24
+tokenizers>=0.15
+tenseal>=0.3.14
+
+# Optional training / data
+# transformers
+# datasets
+# fastapi
+# uvicorn
